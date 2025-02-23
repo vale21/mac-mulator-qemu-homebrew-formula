@@ -1,4 +1,4 @@
-class QemuVirgl < Formula
+class MacMulatorQemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
   url "https://github.com/qemu/qemu.git", using: :git, revision: "stable-9.2"
