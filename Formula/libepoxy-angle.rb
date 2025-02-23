@@ -13,7 +13,7 @@ class LibepoxyAngle < Formula
 
   # waiting for upstreaming of https://github.com/akihikodaki/libepoxy/tree/macos
   patch :p1 do
-    url "https://raw.githubusercontent.com/vale21/mac-mulator-qemu-homebrew-formula/main/Patches/libepoxy.diff"
+    url "https://raw.githubusercontent.com/vale21/mac-mulator-qemu-homebrew-formula/refs/heads/first-push/Patches/libepoxy.diff"
     sha256 "8ce3a33be6ccab5482e77261d0ca98d0a6aeff9d6dfc32b0e75cd323f87dccee"
   end
 
