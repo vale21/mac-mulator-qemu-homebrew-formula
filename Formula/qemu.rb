@@ -76,10 +76,6 @@ class Qemu < Formula
 
     args << "--enable-cocoa" if OS.mac?
 
-    system "python3", "-m", "venv", "pyvenv"
-    system "pyvenv/bin/python", "-m", "pip", "install", "--upgrade", "pip", "setuptools", "wheel"
-    system "pyvenv/bin/python", "-m", "pip", "install", "tomli"
-    
     system "./configure", *args
     system "make", "V=1", "install"
   end
