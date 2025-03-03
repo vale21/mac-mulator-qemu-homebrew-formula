@@ -55,6 +55,8 @@ class Qemu < Formula
       --enable-vde
       --enable-spice
       --enable-virglrenderer
+      --enable-sdl
+      --enable-gtk
       --extra-cflags=-DNCURSES_WIDECHAR=1
       --extra-cflags=-I#{Formula["libangle"].opt_prefix}/include
       --extra-cflags=-I#{Formula["libepoxy-angle"].opt_prefix}/include
@@ -64,8 +66,6 @@ class Qemu < Formula
       --extra-ldflags=-L#{Formula["libepoxy-angle"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["virglrenderer"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["spice-protocol"].opt_prefix}/lib
-      --disable-sdl
-      --disable-gtk
     ]
     # Sharing Samba directories in QEMU requires the samba.org smbd which is
     # incompatible with the macOS-provided version. This will lead to
