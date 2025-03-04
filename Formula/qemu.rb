@@ -29,7 +29,6 @@ class Qemu < Formula
   depends_on "vde"
   depends_on "python@3.13"
   depends_on "sdl2"
-  depends_on "gtk+3"
 
   # 820KB floppy disk image file of FreeDOS 1.2, used to test QEMU
   resource "test-image" do
@@ -58,20 +57,18 @@ class Qemu < Formula
       --enable-spice
       --enable-virglrenderer
       --enable-sdl
-      --enable-gtk
+      --disable-gtk
       --extra-cflags=-DNCURSES_WIDECHAR=1
       --extra-cflags=-I#{Formula["libangle"].opt_prefix}/include
       --extra-cflags=-I#{Formula["libepoxy-angle"].opt_prefix}/include
       --extra-cflags=-I#{Formula["virglrenderer"].opt_prefix}/include
       --extra-cflags=-I#{Formula["spice-protocol"].opt_prefix}/include/spice-1
       --extra-cflags=-I#{Formula["sdl2"].opt_prefix}/include
-      --extra-cflags=-I#{Formula["gtk+3"].opt_prefix}/include
       --extra-ldflags=-L#{Formula["libangle"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["libepoxy-angle"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["virglrenderer"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["spice-protocol"].opt_prefix}/lib
       --extra-ldflags=-L#{Formula["sdl2"].opt_prefix}/lib
-      --extra-ldflags=-L#{Formula["gtk+3"].opt_prefix}/lib
     ]
     # Sharing Samba directories in QEMU requires the samba.org smbd which is
     # incompatible with the macOS-provided version. This will lead to
