@@ -2,7 +2,7 @@ class Qemu < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
   url "https://github.com/qemu/qemu.git", using: :git, revision: "v9.2.2"
-  version "20211212.1"
+  version "v0.4.9"
   license "GPL-2.0-only"
 
   depends_on "libtool" => :build
