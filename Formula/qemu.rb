@@ -28,6 +28,7 @@ class Qemu < Formula
   depends_on "spice-protocol"
   depends_on "vde"
   depends_on "python@3.13"
+  depends_on "sdl2"
 
   # 820KB floppy disk image file of FreeDOS 1.2, used to test QEMU
   resource "test-image" do
