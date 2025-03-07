@@ -36,11 +36,10 @@ class Qemu < Formula
     sha256 "81237c7b42dc0ffc8b32a2f5734e3480a3f9a470c50c14a9c4576a2561a35807"
   end
 
-  # waiting for upstreaming of https://github.com/akihikodaki/qemu/tree/macos
-  # patch :p1 do
-  #   url "https://raw.githubusercontent.com/vale21/homebrew-qemu-virgl/87072b7ccc07f5087bf0848fa8920f8b3f8d5a47/Patches/qemu-v05.diff"
-  #   sha256 "6d27699ba454b5ecb7411822a745b89dce3dea5fccabfb56c84ad698f3222dd4"
-  # end
+  patch :p1 do
+    url "https://raw.githubusercontent.com/vale21/homebrew-mac-mulator/refs/heads/main/Patches/qemu-icons.patch"
+    sha256 "2657dc7413eff6b627944b5cff0efe156f2ead335ce1c8f788a03accf1a9ad98"
+  end
 
   def install
     ENV["LIBTOOL"] = "glibtool"
